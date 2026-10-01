@@ -4,25 +4,43 @@ def read_two_ints():
     # ADD a Docstring for this function
     # the return shown below is a placeholder to make sure this runs
     # TODO: complete the function instead of the line shown below
-    return 1, 2
+
+    aString = input("give me x: ")
+    a = int(aString)
+    bString = input("give me y: ")
+    b = int(bString)
+    return a,b
 
 # Task 2.1:
 #  Complete the function "compute_multadd" below:
 def compute_multadd(a, b):
-    # ADD a Docstring for this function
-    # the pass shown below is a placeholder to make sure this runs
-    # TODO: complete the function instead of the line shown below
-    pass
+    """this mutiplies a and b and prints the result"""
+    mult = (a*b)
+    print("mult result:",mult)
+    
+    add = (a+b)
+    print("add result:",add)
+    
+    ab_multadd = mult/add
+
+    return ab_multadd
 
 # Task 3.1:
 #  Complete the function "print_fancy" below:
 def print_fancy(a, b, ab_multadd):
-    # ADD a Docstring for this function
-    # the pass shown below is a placeholder to make sure this runs
-    # TODO: complete the function instead of the line shown below
-    pass
-
+        """This is where we make things fancy"""
+        print("****************")
+        print("RESULTS:")
+        print("first number:", a)
+        print("second number:",b)
+        print("multadd result:",round(ab_multadd, 1))
+        print("================")
+        
 def main ():
+    x,y = read_two_ints()
+    xy_multadd = compute_multadd(x,y)
+    print_fancy (x,y, xy_multadd)
+    
     # ADD a Docstring for this function
     # Task 1.2:
     #  Add one line below to call read_two_ints (note that it returns two values)
@@ -35,6 +53,7 @@ def main ():
     #  Add one line below to call multadd (note that it returns one value)
     #  the call should provide the arguments x, and y you obtained above;
     #  store the returned value in a variable called xy_multadd
+  
 
     # TODO: add your call instead of this line
 
